@@ -70,6 +70,9 @@ alter table student add constraint check (age > 15 and age < 50);
 alter table classstudent drop constraint classstudent_ibfk_1;
 alter table classstudent drop constraint classstudent_ibfk_2;
 alter table mark drop constraint mark_ibfk_1 , drop constraint mark_ibfk_2;
+-- alter table student drop constraint student_id where student_id = 1;
+alter table student add column status bit default 1;
+update student set status = 0 where student_id > 0;
 
 
 
